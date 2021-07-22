@@ -2,14 +2,17 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -23,7 +26,8 @@
     "react",
     "@typescript-eslint",
     "prettier",
-    "import"
+    "import",
+    "jest"
   ],
   "rules": {
     "prettier/prettier": ["error", {
@@ -56,6 +60,11 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "func-names": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -69,6 +78,9 @@
     ]
   },
   "settings": {
+    "jest": {
+      "version": 26.6
+    },
     "import/resolver": {
       "typescript": {},
       "node": {
