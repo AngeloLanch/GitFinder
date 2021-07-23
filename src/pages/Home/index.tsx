@@ -1,15 +1,23 @@
-import { useContext, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
+import { FormEvent, useContext, useState } from 'react';
 import catFinder from 'assets/cat.png';
 import { AuthContext } from 'context/Auth';
 
 import { SignIn } from 'components/SignIn';
 
-import { Container } from './styles';
+import { Link } from 'react-router-dom';
+import { Container, SearchContainer } from './styles';
 
 export function Home() {
-  const { signed } = useContext(AuthContext);
+  const { token } = useContext(AuthContext);
+  const [userSearch, setuserSearch] = useState('teste');
+
+  function handleText(searchText: string) {
+    setuserSearch(searchText);
+  }
+
+  function handleSearch(e: FormEvent) {
+    e.preventDefault();
+  }
 
   return (
     <Container>
@@ -20,7 +28,21 @@ export function Home() {
         <img src={catFinder} alt="cat" />
         <p>Para realizar a pesquisa, conexe-se ao seu GitHub</p>
       </div>
-      <SignIn />
+      {token ? (
+        <SearchContainer onSubmit={handleSearch}>
+          <input
+            type="text"
+            value={userSearch}
+            onChange={e => handleText(e.target.value)}
+            placeholder="Procurar por usuário..."
+          />
+          <Link to={`/search/${userSearch}`}>
+            <button type="submit">Pesquisar</button>
+          </Link>
+        </SearchContainer>
+      ) : (
+        <SignIn />
+      )}
     </Container>
   );
 }

@@ -1,5 +1,6 @@
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import { Home } from 'pages/Home/index';
+import { Home } from 'pages/Home';
+import { Search } from 'pages/Search';
 import GlobalStyle from 'styles/GlobalStyles';
 import { Footer } from 'components/Footer';
 import { AuthProvider } from 'context/Auth';
@@ -11,11 +12,11 @@ function App() {
         <AuthProvider>
           <GlobalStyle />
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/login/github/callback">
-              <Home />
+            <Route path="/search/:user">
+              <Search />
             </Route>
           </Switch>
         </AuthProvider>

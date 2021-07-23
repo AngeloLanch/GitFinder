@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   .App {
-    height: 100vh;
     width: 100%;
   }
 
@@ -49,7 +48,7 @@ export default createGlobalStyle`
   }
 
   body, input, textarea, button {
-    font-family: Poppins, sans-serif;
+    font-family: STIX Two Math;
     font-size: 16px;
   }
 

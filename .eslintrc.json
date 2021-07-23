@@ -27,6 +27,7 @@
     "@typescript-eslint",
     "prettier",
     "import",
+    "react-hooks",
     "jest"
   ],
   "rules": {
@@ -35,7 +36,8 @@
     }],
     "import/no-duplicates": "off",
     "jsx-a11y/label-has-associated-control": "off",
-    "react-hooks/rules-of-hooks": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",
     "camelcase": "off",
