@@ -1,46 +1,114 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="a cat playing with a ball" title="#GitFinder" src="./assets/../src/assets/presentation.png" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+	🚧 GitFinder v1.0 - sempre em construção... 🚧
+</h4>
 
-## Available Scripts
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/AngeloLanch/GitFinder?color=%2304D361">
 
-In the project directory, you can run:
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/angeloLanch/GitFinder">
 
-### `yarn start`
+  <a href="https://github.com/AngeloLanch/GitFinder/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AngeloLanch/GitFinder">
+  </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## 💻 Sobre o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O projeto no estilo buscador de repositórios não foi é pra mim, eu já havia feito outro em javascript puro, a um ano atrás, e com isso achei que não me daria muito trabalho, até porque hoje eu sei bem mais doque o eu do ano passado.
 
-### `yarn build`
+A verdade é que senti o peso de um ano de estudos em JS. Fazer este projeto em apenas 4 dias, utilizando React, Typescript, StyledComponents, Jest, express(um micro backend), e ainda com melhores práticas de programação junto as configurações de ESlint e Prettier, foi um tanto quanto desafiador.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 Layout
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O layout da aplicação foi inspirado nas famosas capas de livros da O'Reilly, tendo o gato como personagem devido a sua natureza caçadora. Buscando pela utilidade como fator principal, aproveitei as cores em preto e branco da imagem do gato, e a extendi por toda a aplicação.
+Os botões com design de "boom da internet" não negam a pressa em finalizar (e que eu já tenho mais de 20 e poucos anos), mas combinou vai...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Tecnologias
 
-### `yarn eject`
+As seguintes ferramentas foram usadas na construção do projeto:
+- [Node.js][nodejs],
+- [React][react]
+- [TypeScript][typescript]
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :mailbox_closed: API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A API utilizada nessa aplicação foi a do Github:
+https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Node.js][nodejs],
+[react],
+[typescript],
 
-## Learn More
+exceto pelo Node, os outros arquivos serão instalados assim que digitar o comando:
+``` yarn install```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Além disto é bom ter um editor para trabalhar com o código como o [VSCode][vscode]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :cat: Clonando o Repositório
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/AngeloLanch/GitFinder
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd gitfinder
+
+# Instale as dependências
+$ yarn install
+
+```
+
+## :coffee: Como executar o projeto
+
+Após fazer o clone do projeto, abra-o em seu editor preferido, navegue para a pasta 'backend' e em seguida digite o comando:
+```yarn start```
+
+Você receberá uma mensagme no console:
+"running in https://localhost:8080"
+
+Seu servidor já está rodando!
+
+Em seguida, abra outro terminal e navegue de volta para a pasta principal do projeto. Eexecute o comando novamente:
+```yarn start```
+
+A palicação começará a rodar em localhost:3000
+
+## :raising_hand: Para contribuir com o projeto
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+
+## :flying_saucer: Problemas comuns:
+
+Para conseguir utilizar a aplicação corretamente, é necessário possuir os códigos de autenticação de usuário no github.
+O arquivo .env com os códigos, clientID e clientSecret, não estão contidos neste repositório por motivos de segurança.
+Para ter acesso completo a aplicação, entre em contato que eu te passo na boa =)
+
+## 📝 Licença
+
+Feito por: Ângelo Lanche.
+Este projeto está sobe a licença MIT.
+
+[Entre em contato!](https://www.linkedin.com/in/AngeloLanch/)
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[yarn]: https://yarnpkg.com/
+[vscode]: https://code.visualstudio.com/
+[react]: https://reactjs.org/docs/getting-started.html
+[githubAPI]: https://docs.github.com/en/rest
+[githubOauth]: https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
+[license]: https://opensource.org/licenses/MIT

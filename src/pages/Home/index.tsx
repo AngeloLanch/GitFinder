@@ -26,7 +26,7 @@ export function Home() {
       </header>
       <div>
         <img src={catFinder} alt="cat" />
-        <p>Para realizar a pesquisa, conexe-se ao seu GitHub</p>
+        <p>Para realizar a pesquisa, se conecte ao seu GitHub</p>
       </div>
       {token ? (
         <SearchContainer onSubmit={handleSearch}>
