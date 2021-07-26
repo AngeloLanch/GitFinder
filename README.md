@@ -36,6 +36,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Node.js][nodejs],
 - [React][react]
 - [TypeScript][typescript]
+- [Jest][jest]
 
 ## :mailbox_closed: API
 
@@ -91,6 +92,7 @@ A palicação começará a rodar em localhost:3000
    - Loading enquanto as requisições não retornam;
    - Melhorar a aplicação do useContext. Ao meu ver, os componentes poderiam receber as informações via props, enquanto as páginas se utilizam dos contextos;
    - A junção do estado que armazeda os dados requisitados com o estado que armazeda a flag booleana se os dados foram requisitados ou não, em um único estado, que armazenaria um objeto contentendo {flag, data}
+   - Realizar mais testes (só tem um no momento)
 
 1. Faça um **fork** do projeto.
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
@@ -123,3 +125,4 @@ Este projeto está sobe a licença MIT.
 [githubAPI]: https://docs.github.com/en/rest
 [githubOauth]: https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
 [license]: https://opensource.org/licenses/MIT
+[jest]: https://jestjs.io/
