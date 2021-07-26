@@ -85,6 +85,13 @@ A palicação começará a rodar em localhost:3000
 
 ## :raising_hand: Para contribuir com o projeto
 
+-- O Que melhorar ?
+  Alguns pontos que gostaria de melhorar no projeto:
+   - Página de pesquisa não encontrada (404);
+   - Loading enquanto as requisições não retornam;
+   - Melhor a aplicação do useContext. Ao meu ver, os componentes poderiam receber as informações va props, enquanto as páginas se utilizam dos contextos;
+   - A junção do estado que armazeda os dados requisitados com o estado que armazeda a flag booleana se os dados foram requisitados ou não, em um único estado, que armazenaria um objeto contentendo {flag, data}
+
 1. Faça um **fork** do projeto.
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
 3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
