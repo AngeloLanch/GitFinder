@@ -97,6 +97,10 @@ Para conseguir utilizar a aplicação corretamente, é necessário possuir os c�
 O arquivo .env com os códigos, clientID e clientSecret, não estão contidos neste repositório por motivos de segurança.
 Para ter acesso completo a aplicação, entre em contato que eu te passo na boa =)
 
+ou crie as suas próprias entrando em "settings" -> "developer Settings" -> OauthApps -> New OauthApp.
+  - As rotas de entrada e callback devem ser https://localhost:3000
+  - Após obter suas chaves de acesso, crie um arquivo .env no front e backend da aplicação com as suas chaves de acesso
+
 ## 📝 Licença
 
 Feito por: Ângelo Lanche.
