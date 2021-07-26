@@ -21,7 +21,7 @@
 
 ## 💻 Sobre o projeto
 
-O projeto no estilo buscador de repositórios não foi é pra mim, eu já havia feito outro em javascript puro, a um ano atrás, e com isso achei que não me daria muito trabalho, até porque hoje eu sei bem mais doque o eu do ano passado.
+O projeto no estilo buscador de repositórios não foi novo pra mim, eu já havia feito outro em javascript puro, a um ano atrás, e com isso achei que não me daria muito trabalho, até porque hoje eu sei bem mais doque o eu do ano passado.
 
 A verdade é que senti o peso de um ano de estudos em JS. Fazer este projeto em apenas 4 dias, utilizando React, Typescript, StyledComponents, Jest, express(um micro backend), e ainda com melhores práticas de programação junto as configurações de ESlint e Prettier, foi um tanto quanto desafiador.
 
