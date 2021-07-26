@@ -4,12 +4,13 @@ import { AuthContext } from 'context/Auth';
 
 import { SignIn } from 'components/SignIn';
 
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Container, SearchContainer } from './styles';
 
 export function Home() {
   const { token } = useContext(AuthContext);
   const [userSearch, setuserSearch] = useState('teste');
+  const history = useHistory();
 
   function handleText(searchText: string) {
     setuserSearch(searchText);
@@ -17,6 +18,7 @@ export function Home() {
 
   function handleSearch(e: FormEvent) {
     e.preventDefault();
+    history.push(`/search/${userSearch}`);
   }
 
   return (
@@ -32,13 +34,12 @@ export function Home() {
         <SearchContainer onSubmit={handleSearch}>
           <input
             type="text"
+            required
             value={userSearch}
             onChange={e => handleText(e.target.value)}
             placeholder="Procurar por usuário..."
           />
-          <Link to={`/search/${userSearch}`}>
-            <button type="submit">Pesquisar</button>
-          </Link>
+          <button type="submit">Pesquisar</button>
         </SearchContainer>
       ) : (
         <SignIn />
