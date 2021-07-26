@@ -12,20 +12,20 @@ interface MainUserInfos {
 interface SearchUser {
   user: string;
   token: string;
-  setUserGeneralData: React.Dispatch<React.SetStateAction<MainUserInfos>>;
+  setSearchedUserData: React.Dispatch<React.SetStateAction<MainUserInfos>>;
 }
 
 export async function searchUser({
   user,
   token,
-  setUserGeneralData,
+  setSearchedUserData,
 }: SearchUser) {
   try {
     const response = await axios.get(`https://api.github.com/users/${user}`, {
       headers: { Authorization: token },
     });
 
-    setUserGeneralData(response.data);
+    setSearchedUserData(response.data);
     return response.data;
   } catch (err) {
     return err;

@@ -28,6 +28,7 @@ export async function getStarredRepos({
     setStarredRepoList(response.data);
     return response.data;
   } catch (err) {
+    setStarredRepoList([]);
     return err;
   }
 }

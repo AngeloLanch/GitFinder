@@ -10,7 +10,7 @@ import {
 
 export function UserCard() {
   const {
-    userGeneralData,
+    searchedUserData,
     setStarredIsOpen,
     starredIsOpen,
     setReposIsOpen,
@@ -28,19 +28,19 @@ export function UserCard() {
   return (
     <Container>
       <ImageContainer>
-        <img src={userGeneralData.avatar_url} alt="cat" />
+        <img src={searchedUserData.avatar_url} alt="cat" />
       </ImageContainer>
       <UserContainer>
         <UserInfos>
           <p>
             <strong>Nome:</strong>
             <br />
-            {userGeneralData.name}
+            {searchedUserData.name}
           </p>
           <p>
             <strong>Followers:</strong>
             <br />
-            {userGeneralData.followers}
+            {searchedUserData.followers}
           </p>
         </UserInfos>
         <ButtonsContainer>

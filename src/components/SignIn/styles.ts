@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Label = styled.label`
+  margin: 2rem 0 0;
+`;
+
 export const Container = styled.button`
   border: none;
   background: #f1f1f1;

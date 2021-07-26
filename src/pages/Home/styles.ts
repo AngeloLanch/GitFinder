@@ -20,10 +20,6 @@ export const Container = styled.main`
       max-width: 100%;
       height: auto;
     }
-
-    p {
-      margin: 2rem 0 0;
-    }
   }
 `;
 

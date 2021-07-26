@@ -20,8 +20,8 @@ interface AuthContextData {
   token: string;
   signIn(code: string | null): Promise<void>;
 
-  userGeneralData: MainUserInfos;
-  setUserGeneralData: React.Dispatch<React.SetStateAction<MainUserInfos>>;
+  searchedUserData: MainUserInfos;
+  setSearchedUserData: React.Dispatch<React.SetStateAction<MainUserInfos>>;
 
   starredIsOpen: boolean;
   setStarredIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -39,7 +39,7 @@ export const AuthContext = createContext<AuthContextData>(
 );
 
 export const AuthProvider: React.FC = ({ children }) => {
-  const [userGeneralData, setUserGeneralData] = useState({} as MainUserInfos);
+  const [searchedUserData, setSearchedUserData] = useState({} as MainUserInfos);
   const [token, setToken] = useState('');
 
   const [starredIsOpen, setStarredIsOpen] = useState(false);
@@ -62,8 +62,8 @@ export const AuthProvider: React.FC = ({ children }) => {
       value={{
         signIn,
         token,
-        setUserGeneralData,
-        userGeneralData,
+        setSearchedUserData,
+        searchedUserData,
         setStarredIsOpen,
         starredIsOpen,
         setStarredRepoList,

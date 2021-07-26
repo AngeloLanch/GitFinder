@@ -26,7 +26,7 @@ interface Params {
 export function Search() {
   const { user } = useParams<Params>();
   const {
-    setUserGeneralData,
+    setSearchedUserData,
     starredIsOpen,
     token,
     starredRepoList,
@@ -43,14 +43,14 @@ export function Search() {
 
   function handleSearch(e: FormEvent) {
     e.preventDefault();
-    searchUser({ setUserGeneralData, user, token });
+    searchUser({ setSearchedUserData, user, token });
   }
 
   useEffect(() => {
-    searchUser({ setUserGeneralData, user, token });
+    searchUser({ setSearchedUserData, user, token });
     getStarredRepos({ user, token, setStarredRepoList });
     getUserRepos({ user, token, setUserRepoList });
-  }, [setStarredRepoList, setUserGeneralData, setUserRepoList, token, user]);
+  }, [setStarredRepoList, setSearchedUserData, setUserRepoList, token, user]);
 
   return (
     <Container onSubmit={handleSearch}>

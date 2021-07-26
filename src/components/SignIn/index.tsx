@@ -2,7 +2,7 @@ import { AuthContext } from 'context/Auth';
 import { useContext, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
-import { Container } from './styles';
+import { Container, Label } from './styles';
 
 export function SignIn() {
   const { signIn } = useContext(AuthContext);
@@ -24,9 +24,12 @@ export function SignIn() {
   }
 
   return (
-    <Container type="button" onClick={handleSignIn}>
-      <FaGithub />
-      Sign in
-    </Container>
+    <>
+      <Label>Para realizar a pesquisa, se conecte ao seu GitHub</Label>
+      <Container type="button" onClick={handleSignIn}>
+        <FaGithub />
+        Sign in
+      </Container>
+    </>
   );
 }
